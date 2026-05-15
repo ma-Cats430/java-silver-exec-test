@@ -37,3 +37,13 @@ String[] bomp = {"イアス", "ガブットボンプ"};
 String[] fruits;
 fruits = new String[]{"イアス", "ガブットボンプ"};
 ```
+
+## 配列の中身、デフォルト値
+### {null, null, null}
+```Java
+String[] strArray = new String[3];
+```
+### {0, 0, 0}
+```Java
+a
+```
