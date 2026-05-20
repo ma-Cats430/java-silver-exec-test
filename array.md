@@ -60,6 +60,7 @@ public class Main {
         System.out.println(array[0]);
     }
 }
+
 /*
 A. 10
 B. 0
@@ -80,6 +81,7 @@ public class Main {
         System.out.println(array[1][1]);
     }
 }
+
 /*
 A. 2
 B. 3
@@ -87,5 +89,112 @@ C. 4
 D. 5
 E. コンパイルエラーが発生する
 F. 実行時にNullPointerExceptionがスローされる
+*/
+```
+
+### 3. 以下のプログラムをコンパイル、実行したときの結果として正しいものを1つ選びなさい。
+<details><summary>✅ 答え</summary>C. 9,9</details>
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3};
+        int[] b = a;
+        b[1] = 9;
+        System.out.println(a[1] + "," + b[1]);
+    }
+}
+
+/*	
+A. 2,2
+B. 2,9
+C. 9,9
+D. 9,2
+*/
+```
+
+### 4. 以下のプログラムをコンパイル、実行したときの結果として正しいものを1つ選びなさい。
+<details><summary>✅ 答え</summary>B. null</details>
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+        String[][] array = new String[2][2];
+        System.out.println(array[0][0]);
+    }
+}
+
+/*
+A. "" (空文字)
+B. null
+C. コンパイルエラーが発生する
+D. 実行時にArrayIndexOutOfBoundsExceptionがスローされる
+*/
+```
+
+### 5. 以下のプログラムをコンパイル、実行したときの結果として正しいものを1つ選びなさい。
+<details><summary>✅ 答え</summary>B. false</details>
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3};
+        int[] b = {1, 2, 3};
+        System.out.println(a.equals(b));
+    }
+}
+
+/*
+A. true
+B. false
+C. 0
+D. 1
+E. コンパイルエラーが発生する
+F. 実行時にIllegalArgumentExceptionがスローされる
+*/
+```
+
+### 6. 以下のプログラムをコンパイル、実行したときの結果として正しいものを1つ選びなさい。
+<details><summary>✅ 答え</summary>D. 実行時にArrayStoreExceptionがスローされる</details>
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+        Object[] array = new String[3];
+        array[0] = "Java";
+        array[1] = new StringBuilder("SE");
+        System.out.println(array[1]);
+    }
+}
+
+/*
+A. SE
+B. Java
+C. コンパイルエラーが発生する
+D. 実行時にArrayStoreExceptionがスローされる
+E. 実行時にClassCastExceptionがスローされる
+*/
+```
+
+
+### 7. 以下のプログラムをコンパイル、実行したときの結果として正しいものを1つ選びなさい。
+<details><summary>✅ 答え</summary>E. array = new int[]{40, 50, 60};の行でコンパイルエラーが発生する</details>
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+        final int[] array = {10, 20, 30};
+        array[0] = 100;
+        array = new int[]{40, 50, 60};
+        System.out.println(array[0]);
+    }
+}
+
+/*
+A. 10
+B. 100
+C. 40
+D. array[0] = 100;の行でコンパイルエラーが発生する
+E. array = new int[]{40, 50, 60};の行でコンパイルエラーが発生する
 */
 ```
