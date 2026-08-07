@@ -1,0 +1,7 @@
+// 放送のチャンネル名（ユニークな文字列なら何でもOK）
+public static final String ACTION_FCM_DATA = "jp.ac.jec.cm25cm0118.fcmtest.FCM_DATA_RECEIVED";
+
+// onRecevied内に
+Intent intent = new Intent(ACTION_FCM_DATA);
+// 放送を送信！
+sendBroadcast(intent);
