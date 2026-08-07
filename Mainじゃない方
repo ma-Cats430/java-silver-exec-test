@@ -5,3 +5,12 @@ public static final String ACTION_FCM_DATA = "jp.ac.jec.cm25cm0118.fcmtest.FCM_D
 Intent intent = new Intent(ACTION_FCM_DATA);
 // 放送を送信！
 sendBroadcast(intent);
+
+//MainのonResume内
+IntentFilter filter = new IntentFilter(MyFirebaseMessagingService.ACTION_FCM_DATA);
+// Android 14以降の互換性対応
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+  registerReceiver(fcmReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+} else {
+  registerReceiver(fcmReceiver, filter);
+}
